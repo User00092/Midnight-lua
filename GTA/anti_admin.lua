@@ -1,6 +1,6 @@
 local admin, player_index
 function OnInit()
-    console.log("Loaded anti-admin")
+    console.log("Loaded")
     admin = not admin
 end
 
@@ -18,5 +18,5 @@ function OnPlayerJoin(ply)
 end
 
 function OnDone()
-    console.log("Unloaded anti-admin")
+    console.log("Unloaded")
 end
