@@ -16,7 +16,7 @@ end
 
 function OnChatMsg(ply, text)
     if text == "!spam help" then 
-		player_index = player.index()
+	player_index = player.index()
         if (player_index == ply) then
 			utils.send_chat("Type '!start spam <runs>'", true)
 			utils.send_chat("Type '!start spam <10/20/30/40/50/60/70/80/90/100/true>'.", true)
