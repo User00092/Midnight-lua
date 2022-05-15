@@ -1,7 +1,7 @@
 -- made by User0092
 
 function OnInit()
-    console.log("\nLoaded\n")
+    console.log("\nLoaded player_kick\n")
     session_active = lobby.is_session_active()
     if session_active == false then 
         utils.notify("Player_kick.lua", "Reload script in online session", 17, 3)
@@ -43,5 +43,5 @@ function OnChatMsg(ply, text)
 end
 
 function OnDone()
-   console.log("\nUnloaded\n") 
+   console.log("\nUnloaded player_kick \n") 
 end
