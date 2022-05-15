@@ -1,7 +1,7 @@
 -- Made by User0092
 -- function help from Karlend
 
-local player_index, session_active
+local player_index, session_active, spam_text
 function OnInit()
     console.log("Loaded spam") 
     session_active = lobby.is_session_active()
@@ -16,12 +16,13 @@ end
 
 
 function OnChatMsg(ply, text)
+	spam_text = "SPAM TEMP TEXT" --Change what is displayed by altering the text in quotations 
     if text == "!spam help" then 
 		player_index = player.index()
         if (player_index == ply) then
 			utils.send_chat("Type '!start spam <runs>'", true)
 			utils.send_chat("Type '!start spam <10/20/30/40/50/60/70/80/90/100/true>'.", true)
-			utils.send_chat("Example: '!start spam 30' will spam '!!!SPAM THEM ALL!!!' 30 times.", true)
+			utils.send_chat("Example: '!start spam 30' will spam '<text>' 30 times.", true)
 			utils.send_chat("Note: You cannot stop spam true as of this moment. The game must be restarted, hence why it is not active", true)
 			utils.send_chat("If the script breaks, please let 'User0092' know.", true)
 		end
@@ -30,7 +31,7 @@ function OnChatMsg(ply, text)
         player_index = player.index()
         if (player_index == ply) then
             for index = 0,9 do 
-                utils.send_chat("!!!SPAM THEM ALL!!!", false, 1)
+                utils.send_chat(spam_text, false, 1)
             end
         end
     end
@@ -38,7 +39,7 @@ function OnChatMsg(ply, text)
         player_index = player.index()
         if (player_index == ply) then
             for index = 0,19 do 
-                utils.send_chat("!!!SPAM THEM ALL!!!", false, 1)
+                utils.send_chat(spam_text, false, 1)
             end
         end
     end
@@ -46,7 +47,7 @@ function OnChatMsg(ply, text)
         player_index = player.index()
         if (player_index == ply) then
             for index = 0,29 do 
-                utils.send_chat("!!!SPAM THEM ALL!!!", false, 1)
+                utils.send_chat(spam_text, false, 1)
             end
         end
     end
@@ -54,7 +55,7 @@ function OnChatMsg(ply, text)
         player_index = player.index()
         if (player_index == ply) then
             for index = 0,39 do 
-                utils.send_chat("!!!SPAM THEM ALL!!!", false, 1)
+                utils.send_chat(spam_text, false, 1)
             end
         end
     end
@@ -62,7 +63,7 @@ function OnChatMsg(ply, text)
         player_index = player.index()
         if (player_index == ply) then
             for index = 0,49 do 
-                utils.send_chat("!!!SPAM THEM ALL!!!", false, 1)
+                utils.send_chat(spam_text, false, 1)
             end
         end
     end
@@ -70,7 +71,7 @@ function OnChatMsg(ply, text)
         player_index = player.index()
         if (player_index == ply) then
             for index = 0,59 do 
-                utils.send_chat("!!!SPAM THEM ALL!!!", false, 1)
+                utils.send_chat(spam_text, false, 1)
             end
         end
     end
@@ -78,7 +79,7 @@ function OnChatMsg(ply, text)
         player_index = player.index()
         if (player_index == ply) then
             for index = 0,69 do 
-                utils.send_chat("!!!SPAM THEM ALL!!!", false, 1)
+                utils.send_chat(spam_text, false, 1)
             end
         end
     end
@@ -86,7 +87,7 @@ function OnChatMsg(ply, text)
         player_index = player.index()
         if (player_index == ply) then
             for index = 0,79 do 
-                utils.send_chat("!!!SPAM THEM ALL!!!", false, 1)
+                utils.send_chat(spam_text, false, 1)
             end
         end
     end
@@ -94,7 +95,7 @@ function OnChatMsg(ply, text)
         player_index = player.index()
         if (player_index == ply) then
             for index = 0,89 do 
-                utils.send_chat("!!!SPAM THEM ALL!!!", false, 1)
+                utils.send_chat(spam_text, false, 1)
             end
         end
     end
@@ -102,13 +103,13 @@ function OnChatMsg(ply, text)
         player_index = player.index()
         if (player_index == ply) then
             for index = 0,99 do 
-                utils.send_chat("!!!SPAM THEM ALL!!!", false, 1)
+                utils.send_chat(spam_text, false, 1)
             end
         end
     end
 end
 
 function OnDone()
-   console.log("Unloaded spam")
+   console.log("\nUnloaded\n")
    
 end
