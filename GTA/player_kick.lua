@@ -3,9 +3,6 @@
 function OnInit()
     console.log("\nLoaded\n")
     session_active = lobby.is_session_active()
-    if session_active == false then 
-        utils.notify("Player_kick.lua", "Reload script in online session", 17, 3)
-    end
     if session_active == true then
         utils.notify("Player_kick.lua", "type '!kick help' for help", 17, 3)
     end
