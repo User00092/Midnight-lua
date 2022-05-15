@@ -3,20 +3,21 @@
 
 local player_index, session_active
 function OnInit()
-    console.log("Loaded") 
+    console.log("Loaded spam") 
     session_active = lobby.is_session_active()
     if session_active == false then 
         utils.notify("spam.lua", "Reload script in online session", 17, 3)
     end
     if session_active == true then
         utils.notify("spam.lua", "type '!spam help' for help", 17, 3)
+		utils.notify("spam.lua", "Make sure there are no extra spaces in the chat", 17, 3)
     end
 end
 
 
 function OnChatMsg(ply, text)
     if text == "!spam help" then 
-	player_index = player.index()
+		player_index = player.index()
         if (player_index == ply) then
 			utils.send_chat("Type '!start spam <runs>'", true)
 			utils.send_chat("Type '!start spam <10/20/30/40/50/60/70/80/90/100/true>'.", true)
@@ -108,6 +109,6 @@ function OnChatMsg(ply, text)
 end
 
 function OnDone()
-   console.log("Unloaded")
+   console.log("Unloaded spam")
    
 end
