@@ -4,7 +4,6 @@ local log_console = true -- log to the console?
 local log_file = true -- log to 'chat_log.log'?
 
 
-
 local path = fs.get_dir_product() .. "/chat_log.log"
 local function Log(text)
 	console.log(con_color.Blue, "[Chat_log] ")
@@ -19,10 +18,6 @@ function OnInit()
 	end
 end
 function OnChatMsg(ply,text)
-
-	
-	
-	
 	local local_index = player.index()
 	local player_username = player.get_name(ply)
 	if (log_self == true) and (ply == local_index) then 
