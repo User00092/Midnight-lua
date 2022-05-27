@@ -50,8 +50,12 @@ function OnChatMsg(ply,text)
 	if ply ~= local_index then 
 		if time_stamp == false then
 			local log_text = "["..player_username.."] "..text
-			Log(tostring(log_text))
-			fs.file_append(path, log_text.."\n")
+			if log_console == true then 
+				Log(tostring(log_text))
+			end
+			if log_file == true then
+				fs.file_append(path, log_text.."\n")
+			end
 		end
 		if time_stamp == true then 
 			local sys_time = os.date("%c", os.time())
